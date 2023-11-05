@@ -1,0 +1,132 @@
+/* 
+/*!modern css reset  
+*/
+
+:root {
+  --lightBlue: #e0f4ff;
+  --primary: #87c4ff;
+  --accent: #39a7ff;
+  --beige: #ffeed9;
+  --red: red;
+  --ff: "Roboto", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  ! Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--ff);
+  display: grid;
+  place-items: center;
+}
+.container {
+  width: 90%;
+  max-width: 500px;
+}
+
+.quote-content {
+  background-color: var(--primary);
+  color: var(--beige);
+  padding: 0.5em 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.quote-title {
+  text-align: center;
+  font-size: 2.1em;
+  font-weight: 900;
+  margin-bottom: 1em;
+  position: relative;
+}
+.quote-content .quote-title::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 75%;
+  left: 20px;
+  bottom: -3px;
+  background-color: var(--beige);
+}
+.quote-content .quote-text {
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1em;
+}
+.quote-text::before,
+.quote-text::after {
+  font-size: 1.8rem;
+  color: var(--beige);
+  font-weight: 900;
+}
+.quote-text::before {
+  content: open-quote;
+}
+.quote-text::after {
+  content: close-quote;
+}
+
+.quote-cite {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2em;
+}
+
+.generateBtn {
+  display: inline-block;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--accent);
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all ease-in-out 300ms;
+}
+.generateBtn:hover {
+  border: 1px solid var(--beige);
+  color: var(--beige);
+  background-color: var(--accent);
+}
+#quote-length {
+  color: yellow;
+}
